@@ -110,19 +110,20 @@ const subscriptionRadios = document.querySelectorAll(
 
 const singleCard = document.getElementById("singleCard");
 const doubleCard = document.getElementById("doubleCard");
+const border = document.querySelector(".empty-border");
+const bordertwo = document.querySelector(".empty-border-two");
 
 subscriptionRadios.forEach(radio => {
   radio.addEventListener("change", () => {
 
-    // remove active state from all radio cards
+
     document.querySelectorAll(".radio-card").forEach(card => {
       card.classList.remove("active");
     });
 
-    // add active to selected
     radio.closest(".radio-card").classList.add("active");
 
-    // TOGGLE SUBSCRIPTION SECTIONS
+    // toggle single & double subscription cards
     if (radio.value === "single") {
       singleCard.classList.remove("hidden");
       doubleCard.classList.add("hidden");
@@ -130,6 +131,22 @@ subscriptionRadios.forEach(radio => {
       singleCard.classList.add("hidden");
       doubleCard.classList.remove("hidden");
     }
+
+
+    // Border remove script 
+    if(radio.value==="single"){
+      border.classList.remove('hidden')
+    }else{
+        border.classList.add('hidden')
+    }
+
+    if(radio.value==="double"){
+        bordertwo.classList.remove("hidden");
+    }else{
+        bordertwo.classList.add("hidden");
+    }
+
+
   });
 });
 // Product section script End
@@ -139,26 +156,36 @@ subscriptionRadios.forEach(radio => {
 
 
 // collection section script
-/* FAQ ACCORDION */
+
+/* FAQ script */
 document.querySelectorAll(".faq-question").forEach(btn => {
   btn.addEventListener("click", () => {
-    const item = btn.parentElement;
+    const item = btn.closest(".faq-item");
+    const icon = btn.querySelector("i");
     const isOpen = item.classList.contains("active");
 
+    // Close all faq items
     document.querySelectorAll(".faq-item").forEach(i => {
       i.classList.remove("active");
-      i.querySelector(".icon").textContent = "+";
+      const ic = i.querySelector("i");
+      ic.classList.remove("fa-minus");
+      ic.classList.add("fa-plus");
     });
 
+    // Open clicked item 
     if (!isOpen) {
       item.classList.add("active");
-      btn.querySelector(".icon").textContent = "−";
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-minus");
     }
   });
 });
 
 
-/* COUNT UP */
+
+
+
+/* Counter script */
 const counters = document.querySelectorAll(".count");
 let started = false;
 
