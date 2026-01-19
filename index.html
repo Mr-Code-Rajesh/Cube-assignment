@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Developer Assignment</title>
+  <title>Cube UI Developer Assignment</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -11,7 +11,7 @@
 
 <body>
 
-                         <!------- Hero section Start --------->
+<!------- Hero section Start --------->
 
 <section class="hero">
 
@@ -72,33 +72,28 @@
 
 </section>
 
+ <!------- Hero section end ---------> 
 
-                          <!------- Hero section end ---------> 
 
-
-                          <!-- PRODUCT SECTION start  -->
+<!-- PRODUCT SECTION start  -->
 
 <section class="product-section">
 
   <div class="product-container">
 
-    <!-- START LEFT  <=>  IMAGE GALLERY -->
+    <!--  PRODUCT  IMAGE GALLERY -->
 <div class="product-gallery">
 
   <div class="main-image">
-    <button class="arrow left" id="prevBtn"><i class="fa fa-arrow-left" aria-hidden="true"></i>
-</button>
-
+    <button class="arrow left" id="prevBtn"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
     <img
       id="mainImage"
       src="assets/perfume/perfume.png"
-      alt="Perfume" loading="lazy"
-    >
+      alt="Perfume" loading="lazy">
+   <button class="arrow right" id="nextBtn"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </button>
 
-    <button class="arrow right" id="nextBtn"><i class="fa fa-arrow-right" aria-hidden="true"></i>
-</button>
-
-     <!-- DOTS -->
+     <!-- DOTS  ( we can get all the dot's via js script) -->
     <div class="dots" id="dots"></div> 
 
   </div>

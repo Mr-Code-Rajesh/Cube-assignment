@@ -40,7 +40,7 @@ const nextBtn = document.getElementById("nextBtn");
 const thumbnails = document.querySelectorAll("#thumbnails img");
 const dotsContainer = document.getElementById("dots");
 
-/* CREATE DOTS */
+/* Dynamic  script dot's */
 images.forEach((_, index) => {
   const dot = document.createElement("span");
   dot.classList.add("dot");
@@ -50,7 +50,7 @@ images.forEach((_, index) => {
 
 const dots = document.querySelectorAll(".dot");
 
-/* UPDATE UI */
+/* UI Script for Product gallery */
 function updateGallery(index) {
   mainImage.classList.add("fade-out");
 
@@ -88,14 +88,14 @@ thumbnails.forEach(thumb => {
   });
 });
 
-/* DOTS */
+/* dots */
 dots.forEach(dot => {
   dot.addEventListener("click", () => {
     updateGallery(Number(dot.dataset.index));
   });
 });
 
-/* INIT */
+/* initial Index */
 updateGallery(0);
 
 
@@ -152,12 +152,9 @@ subscriptionRadios.forEach(radio => {
 // Product section script End
 
 
-
-
-
 // collection section script
 
-/* FAQ script */
+/* Faq script */
 document.querySelectorAll(".faq-question").forEach(btn => {
   btn.addEventListener("click", () => {
     const item = btn.closest(".faq-item");
@@ -185,7 +182,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 
 
 
-/* Counter script */
+/* Counter script  start*/
 const counters = document.querySelectorAll(".count");
 let started = false;
 
@@ -209,4 +206,5 @@ window.addEventListener("scroll", () => {
   }
 });
 
+/* counter script end */
 
