@@ -168,7 +168,11 @@ html, body {
   .hero {
     padding: 10px 0px;
   }
- 
+
+  .header {
+    padding: 0 20px;
+   }
+  
   .nav {
     display: none;
     position: absolute;
@@ -197,11 +201,16 @@ html, body {
  }
 
   .hero-content {
-    margin-top: 80px;
+  top: 105px;
+  left: 25px;
+  }
+
+  .stats {
+  gap: 40px;
   }
 
   .stat strong {
-  font-size:30px;
+  font-size:25px;
 }
 
 .stat span {
@@ -465,12 +474,6 @@ html, body {
     margin: 20px 0px;
 }
 
-
-.sub-price del {
-  color: #999;
-  margin-left: 6px;
-}
-
           /* SUBSCRIPTION Start  */
 .empty-border{
     border: 1px solid rgba(128, 128, 128, 0.6);
@@ -501,6 +504,8 @@ html, body {
 .sub-price del{
     font-size: 20px;
     font-weight: 300;
+    color: #999;
+    margin-left: 6px;
 }
 
 .double-subscription{
@@ -613,31 +618,16 @@ html, body {
   align-self: flex-start;
 }
 
-
 /* FREE TEXT */
 .included-item strong {
   font-weight: 700;
 }
-
 
 /* include responsive   */
 .included-two img {
   width: 54px;
   height: 94px;
 }
-
-
-@media (max-width: 768px) {
-  .included-boxes {
-    flex-direction: column;
-  }
-
-  .included-one,
-  .included-two {
-    width: 100%;
-  }
-}
-
 
 /* BENEFITS */
 .benefits {
@@ -661,6 +651,53 @@ html, body {
 }
 
    /* subscription end */
+
+
+@media (max-width: 768px) {
+  .included-boxes {
+    flex-direction: column;
+  }
+
+  .included-one,
+  .included-two {
+    width: 100%;
+  }
+
+  .sigle-sub{
+  font-size: 14px;
+}
+.sub-price strong{
+    font-size: 14px;
+}
+.sub-price del{
+    font-size: 14px;
+}
+
+.subscription-box h4{
+    font-size: 14px;
+}
+
+.fragrance-options {
+  width: 250px;
+}
+
+.fragrance-left span{
+    font-size: 10px;
+}
+
+.badge-small {
+  font-size: 6px;
+}
+
+.benefits li {
+  font-size: 12px;
+
+}
+
+
+}
+
+
 
 /* CTA */
 .add-to-cart {
@@ -1028,6 +1065,7 @@ html, body {
 /* WHY CHOOSE SECTION END */
 
 
+
 /* FOOTER SECTION START */
 
 .footer {
@@ -1163,6 +1201,12 @@ html, body {
   justify-content: center;
   flex-direction: column;
 }
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
 
 }
 
